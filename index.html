@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "UTF-8">
+    <meta name =
+      "viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv =
+      "X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" 
+      type="text/css" href="style.css"/>
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+    <title>Modern Web Design</title>
+</head>
+<body>
+  <!-- navigations -->
+  <nav class="navbar" id="navbar">
+    <div class="logo">
+      <h1><a href="">Ace Design</a></h1>
+    </div>
+      <div class="header__hamburger" onclick="toggleMenu()">
+        <div>
+        <div class="bar hamburger__bar1"></div>
+        <div class="bar hamburger__bar2"></div>
+        <div class="bar hamburger__bar3"></div>
+        </div>
+      </div>
+    <div class="navbar-links">
+      <ul class="invisible">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="" id="schedule">
+          <i class="fa-solid fa-calendar-days"></i>Schedule a meeting</a></li>
+      </ul>
+    </div>
+  </nav>
+  <!-- header -->
+  <header>
+    <div class="header-content" id="home">
+      <div class="container" id="header-content">
+        <h1>Creating creativity is our identity.</h1>
+        <p>Stop wasting time and money on faulty and ineffective design for your website or company identity. It's time to make your affordable design trends to level up your business visual.</p>
+        <a href="" id="schedule">
+          <i class="fa-solid fa-calendar-days"></i>Schedule a meeting</a>
+      </div>
+      <div class="container" id="header-image">
+        <img src="head-img.svg">
+      </div>
+    </div>
+  </header>
+  <!-- first section -->
+  <section class="services" id="services">
+    <div class="services-content" >
+      <div class="container" id="services-content">
+        <h6>Our Services</h6>
+        <h1>Web design from our experts.</h1>
+        <p>Stop wasting time and money on faulty and ineffective design for your website or company identity. It's time to make your affordable design trends to level up your business visual.</p>
+        <a href="" id="schedule">
+          <i class="fa-solid fa-calendar-days"></i>Schedule a meeting</a>
+      </div>
+      <div class="container" id="services-image">
+        <img src="section1.svg">
+      </div>
+    </div>
+  </section>
+  <!-- second section -->
+  <section class="explain">
+    <div class="explain-content" >
+      <div class="container" id="explain-content">
+        <h1>Our ready to use templates.</h1>
+        <p>Stop wasting time and money on faulty and ineffective design for your website or company identity. It's time to make your affordable design trends to level up your business visual.</p>
+        <a href="" id="schedule">
+          <i class="fa-solid fa-calendar-days"></i>Schedule a meeting</a>
+      </div>
+      <div class="container" id="explain-image">
+        <img src="section2.svg">
+      </div>
+    </div>
+  </section>
+  <!-- third section -->
+  <section class="quality">
+    <div class="quality-content" >
+      <div class="container" id="quality-content">
+        <h1>High-quality and scalable images.</h1>
+        <p>Stop wasting time and money on faulty and ineffective design for your website or company identity. It's time to make your affordable design trends to level up your business visual.</p>
+        <a href="" id="schedule">
+          <i class="fa-solid fa-calendar-days"></i>Schedule a meeting</a>
+      </div>
+      <div class="container" id="quality-image">
+        <img src="section4.svg">
+      </div>
+    </div>
+  </section>
+  <!-- fifth section -->
+  <section class="pricing" id="pricing">
+    <div class="pricing-content" >
+      <div class="container" id="pricing-content">
+        <h6>Our Pricing</h6>
+        <h1>Price starts from 15$</h1>
+        <ul>
+          <li>Graphic Design - 15$</li>
+          <li>Web Templates - 25$</li>
+          <li>WordPress Website - 100$</li>
+          <li>Full Website - 150$</li>
+        </ul>
+        <a href="" id="schedule">
+          <i class="fa-solid fa-calendar-days"></i>Schedule a meeting</a>
+      </div>
+      <div class="container" id="pricing-image2">
+        <img src="section6.svg">
+      </div>
+    </div>
+  </section>
+  <!-- sixth section -->
+  <section class="about" id="about">
+    <div class="about-content" >
+      <div class="container" id="about-content">
+        <h6>About Us</h6>
+        <h1>Ace Design is a popular website for non-designers.</h1>
+        <p>Stop wasting time and money on faulty and ineffective design for your website or company identity. It's time to make your affordable design trends to level up your business visual.</p>
+        <a href="" id="schedule">
+          <i class="fa-solid fa-calendar-days"></i>Schedule a meeting</a>
+      </div>
+      <div class="container" id="about-image">
+        <img src="section7.svg">
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="container">
+        <div class="social-links">
+          <a href="">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-facebook-messenger"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+          <a href="">
+            <i class="fa-brands fa-pinterest"></i>
+          </a>
+        </div>
+        <div class="copyright">
+          <p>&copy; Copyright 2022. All Right Reserved Ace Design</p>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+<script>
+    function toggleMenu()
+    {
+        let x = document.querySelector(".header__hamburger");
+        x.classList.toggle("click");
+    
+        x = document.querySelector(".navbar-links");
+        if (x.style.display === "block")
+        {
+            x.style.display = "none";
+        }
+        else
+        {
+            x.style.display = "block";
+        }
+    }
+</script>
+</body>
+</html>

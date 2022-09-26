@@ -1,0 +1,329 @@
+
+/* font used Titillium and Poppins */
+:root{
+  --baseColor: #030626;
+  --pinkColor: #4567ad;
+  --purpleColor: #7604aa;
+  --white: whitesmoke;
+  --lightgrey: grey;
+  
+  --fontTweb: 'Titillium Web', sans-serif;
+  --fontPoppins: 'Poppins', sans-serif;
+}
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  background-color: var(--baseColor);
+}
+/* ------ groups ------ */
+a, button{
+  text-decoration: none;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+img{
+  width: 100%;
+}
+.fa-solid{
+  margin-right: 0.5rem;
+}
+/* ------ navigations ------ */
+.navbar{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2% 6%;
+  position: sticky;
+  top: 0px;
+  background: var(--baseColor);
+  box-shadow: 0px 0px 8px var(--purpleColor);
+  z-index: 999999999;
+}
+.logo h1{
+  font-family: var(--fontTweb);
+  font-size: 2rem;
+  font-weight: 700;
+  background-image: linear-gradient(-200deg, var(--pinkColor) 10%, var(--purpleColor) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.navbar-links{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar-links ul{
+  list-style-type: none;
+}
+.navbar-links ul li{
+  margin: 0 1rem;
+  display: inline-block;
+}
+.navbar-links ul li a{
+  color: var(--lightgrey);
+  font-family: var(--fontPoppins);
+  font-size: 0.9rem;
+  font-weight: 400;
+  transition: 0.5s;
+}
+.navbar-links ul li a:hover{
+  color: var(--white);
+}
+#schedule {
+  padding: 12px 1.7rem;
+  background-image: linear-gradient(to right, var(--pinkColor) 10%, var(--purpleColor) 100%);
+  border-radius: 8px;
+  color: var(--white);
+  font-size: 0.9rem;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+#schedule:hover{
+  background: var(--pinkColor);
+}
+#schedule:focus{
+  background: var(--purpleColor);
+}
+.header-content,
+.services-content,
+.explain-content,
+.quality-content,
+.pricing-content,
+.about-content{
+  display: flex;
+  align-items: center;
+  padding: 3rem;
+}
+.container{
+  width: 50%;
+  color: var(--white);
+  padding: 1rem;
+}
+.container h1{
+  font-family: var(--fontTweb);
+  font-size: 3.3rem;
+}
+.container p{
+  font-family: var(--fontPoppins);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--lightgrey);
+  padding: 0.8rem 0;
+  margin-bottom: 1.5rem;
+}
+.container a{
+  font-family: var(--fontPoppins);
+}
+/* services */
+#services-content,
+#quality-content{
+  order: 2;
+}
+#services-image,
+#quality-image{
+  order: 1;
+}
+#services-content h6,
+#pricing-content h6,
+#about-content h6{
+  font-family: var(--fontPoppins);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--pinkColor);
+}
+/* pricing */
+#pricing-content{
+  width: 40%;
+}
+#pricing-image2 img{
+  width: 100%;
+}
+#pricing-content p{
+  padding: 0;
+}
+#pricing-content ul{
+  padding: 1rem;
+  margin-bottom: 1rem;
+  color: var(--lightgrey);
+  font-family: var(--fontPoppins);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+#pricing-content li{
+  list-style-type: square;
+}
+#pricing-content ul li::marker{
+  color: var(--pinkColor);
+  font-size: 1.2rem;
+}
+#pricing-image1, #pricing-image2{
+  width: 50%;
+}
+/* about */
+#about-content{
+  order: 2;
+}
+#about-image{
+  order: 1;
+}
+
+/* --------- menu button --------- */
+.bar {
+position: absolute;
+width: 30px;
+height: 3px;
+background-color: var(--pinkColor);
+transition: 0.5s;
+display: none;
+}
+.hamburger__bar1{
+      top: -8px;
+}
+ .hamburger__bar3{
+      top: 8px;
+ }
+ .header__hamburger {
+    display: inline-block;
+    top: 1.2rem;
+    right: 1.6rem;
+    padding: 2rem;
+    display: ;
+  }
+  .header__hamburger > div{
+      position: relative;
+  }
+  .click .hamburger__bar1 {
+        transform: rotate(-45deg);
+        top: 0;  
+  }
+  .click .hamburger__bar2{
+        opacity: 0;
+  }
+  .click .hamburger__bar3{
+        transform: rotate(45deg);
+        top: 0;  
+  }
+ 
+ /* footer */
+ .footer-content{
+   padding: 0.5rem 3rem;
+ }
+ .social-links a{
+   font-size: 1.5rem;
+   color: var(--pinkColor);
+   margin: 0 1rem;
+ }
+ .copyright p{
+   font-family: var(--fontTweb);
+   font-size: 1rem;
+   font-weight: 400;
+   letter-spacing: 1px;
+   color: var(--lightgrey);
+ }
+/* --------- 
+Media queries
+--------- */
+@media screen and (max-width: 767px){
+  .header-content,
+  .services-content,
+  .explain-content,
+  .quality-content,
+  .pricing-content,
+  .about-content{
+    flex-direction: column;
+    padding: 3rem 0;
+  }
+  .container{
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  #header-image{
+    display: none;
+  }
+  #explain-content{
+    order: 2;
+  }
+  #explain-image{
+    order: 1;
+  }
+  #pricing-content{
+    width: 100%;
+    order: 2;
+  }
+  #pricing-image2{
+    width: 100%;
+    order: 1;
+  }
+  .bar{
+    display: block;
+    z-index: 4;
+  }
+  .navbar-links{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    z-index: 3;
+    width: 60%;
+    height: 100vh;
+    background-image: linear-gradient(35deg, var(--purpleColor) 0%, var(--baseColor) 100%);
+    padding:2rem 0;
+  }
+  .navbar-links .invisible{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+  }
+  .navbar-links ul li{
+    padding: 1.1rem 0.5rem;
+    text-align: left;
+    width: 100%;
+  }
+ .footer-content{
+   padding: 0rem;
+   text-align: left;
+ }
+ .footer-content .container{
+   margin-bottom: 0;
+ }
+ 
+}
+
+/* ---------
+Media queries for 768px up to 878px
+--------- */
+@media screen and (min-width: 768px) and (max-width: 868px){
+  .bar{
+    display: block;
+    z-index: 9999999;
+  }
+  .navbar-links{
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    flex-direction: column;
+    z-index: 3;
+    width: 30%;
+    height: 100vh;
+    background-image: linear-gradient(315deg, var(--pinkColor) 0%, var(--baseColor) 100%);
+    padding: 4rem 1rem;
+  }
+  .navbar-links .invisible{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .navbar-links ul li{
+    width: 100%;
+    padding: 0.9em 0;
+    text-align: center;
+  }
+  .navbar-links ul li a{
+    color: var(--white);
+  }
+}
